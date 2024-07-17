@@ -67,15 +67,17 @@ if ( [ $hour -ge 0 ] && [ $hour -le 5 ] && [ $mins -ge 0 ] && [ $mins -le 59 ] )
 then
 	echo "\nEarly Morning\n"
 
-elif ( [ $hour -ge 6 ] && [ $hour -le 12 ] && [ $mins -ge 0 ] && [ $mins -le 59 ] ) || ( [ $hour -eq 12 ] && [ $mins -eq 0 ] )
+elif ( [ $hour -ge 6 ] && [ $hour -le 11 ] && [ $mins -ge 0 ] && [ $mins -le 59 ] ) || ( [ $hour -eq 12 ] && [ $mins -eq 0 ] )
 then
 	echo "\nMorning\n"
 
-elif ( [ $hour -ge 13 ] && [ $hour -le 18 ] && [ $mins -ge 0 ] && [ $mins -le 59 ] ) || ( [ $hour -eq 18 ] && [ $mins -eq 0 ] )
+elif ( [ $hour -ge 13 ] && [ $hour -le 17 ] && [ $mins -ge 0 ] && [ $mins -le 59 ] ) || ( [ $hour -eq 18 ] && [ $mins -eq 0 ] )
 then
 	echo "\nAfternoon\n"
 
 elif ( [ $hour -ge 18 ] && [ $hour -le 23 ] && [ $mins -ge 0 ] && [ $mins -le 59 ] ) || ( [ $hour -eq 23 ] && [ $mins -eq 59 ] )
 then
 	echo "\nLate Night\n"
+else
+	echo "\nYou entered time from 1 hour which is not covered for naming.\n"
 fi
